@@ -19,7 +19,7 @@
 
                     <% for(let i = posts.length - 1; i >= 0; i--) { %>
                     
-                          <h4><a href="/post-template"><%= posts[i].postTitle %></a></h4>
+                          <h4><a href="/post-template/<%= posts[i].id%>"><%= posts[i].postTitle %></a></h4>
                         
                     <% } %>
 

@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
   });
 
 
-  app.get("/post-template", (req,res) => {
+  app.get("/post-template/:id", (req,res) => {
     res.render("pages/post-template.ejs", {posts: posts});
     
     if (posts.length === 0) {
@@ -52,6 +52,8 @@ app.get("/", (req, res) => {
     } else {
       console.log(posts[posts.length - 1].postTitle);
     }
+
+    console.log(req.params.id);
 
   })
 
