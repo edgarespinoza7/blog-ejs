@@ -1,0 +1,29 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container text-center">
+    <div class="space-20px"></div>
+
+    <h1>My Latest Posts</h1>
+    <div class="space-20px"></div>
+    <div class="space-20px"></div>
+    <div class="space-20px"></div>
+
+</div>
+
+
+<div class="container-posts">
+    
+    <% for(let i = posts.length - 1; i >= 0; i--) { %>
+        <article>
+            <h2><%= posts[i].postTitle %></h1>
+            <div class="space-10px"></div>
+            <p><%= posts[i].postBody %></p>
+            
+        </article>
+        <div class="space-20px"></div>
+        
+    <% } %>
+
+</div>
+
+<%- include("../partials/footer.ejs") %>
